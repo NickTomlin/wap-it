@@ -19,5 +19,12 @@ Add `Bundle 'muffs/wap-it'` to your bundle file.
 
 ![alt text](http://i.imgur.com/hYRuf2H.gif "wap-it demo")
 
-`,wi` will find the closest `it` block in relation to the currently focused row. From there, it will then toggle the existence of an `only` statement.
-`,wd` does the exact same thing for `describe` blocks.
+`<LEADER>wi` will find the closest `it` block in relation to the currently focused row. From there, it will then toggle the existence of an `only` statement.
+`<LEADER>wd` does the exact same thing for `describe` blocks.
+
+To write the file afterwards:
+
+```viml
+:nmap <Leader>wi :call WapIt()<CR>:w<CR>
+:nmap <Leader>wd :call WapDescribe()<CR>:w<CR>
+```
